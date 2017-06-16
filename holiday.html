@@ -1,0 +1,165 @@
+  <!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![ENDif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![ENDif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![ENDif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![ENDif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bootstrap leave form</title>
+<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="screen"
+ href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+  <body>
+  <div class="container">
+<div class="col-lg-9">
+  <center>
+<h1><b><u>LEAVE MODULE</u></b></h1>
+</center>
+
+<br><br>
+    <form class="form-horizontal" action=" " method="post"  id="start">
+    <fieldset>
+
+
+      
+       <div class="form-group">
+        <label class="col-md-4 control-label"><b>Type of leave</b></label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="leave" class="form-control selectpicker" >
+              <option value=" ">Select the type of leave</option>
+              <option>sick leave</option>
+              <option>Family Responsibility Leave</option>
+              <option >Leave for religious holidays</option>
+              <option >Maternity Leave.</option>
+              <option >Study Leave</option>
+      
+      </select>
+      </div>
+      </div>
+      </div>
+
+<!--<legend> Starting Date</legend>-->
+
+
+
+<div class="form-group">
+    <div id="datetimepicker" class="input-append date">
+    <label class="col-md-4 control-label"><b>Starting Date</b></label>
+      <div class="col-md-6 selectContainer">
+      <input type="text" />
+      <span class="add-on">
+        <i class="glyphicon glyphicon-calendar"></i>
+      </span>
+      </div>
+    </div>
+
+    <script type="text/javascript"
+     src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script> 
+    <script type="text/javascript"
+     src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-IN.js">
+    </script>
+    
+    <script type="text/javascript">
+      $('#datetimepicker').datetimepicker({
+        format: 'dd/MM/yyyy',
+        language: 'pt-IN'
+      });
+      var currentDate = new Date();
+      $("#datetimepicker").datetimepicker("setDate",currentDate);
+
+      var date = new Date();
+       var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+        $('#datetimepicker').datetimepicker({ 
+        minDate: today
+       });
+
+      </script>
+    </div>
+
+ <!--<legend> Ending Date</legend>-->
+
+
+<div class="form-group">
+    <div id="datetimepicker1" class="input-append date">
+
+    <label class="col-md-4 control-label"><b>Ending Date</b></label>
+      <div class="col-md-6 selectContainer">
+      <input type="text"></input>
+      <span class="add-on">
+        <i class="glyphicon glyphicon-calendar"></i>
+      </span>
+      </div>
+      </div>
+    
+    <script type="text/javascript"
+     src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script> 
+    <script type="text/javascript"
+     src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-IN.js">
+    </script>
+    <script type="text/javascript">
+      $('#datetimepicker1').datetimepicker({
+        format: 'dd/MM/yyyy',
+        language: 'pt-IN'
+      });
+    </script>
+
+</div>
+    <div class="form-group">
+        <label class="col-md-4 control-label">Reason </label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <textarea class="form-control" name="comment" placeholder="About "></textarea>
+          </div>
+        </div>
+      </div>
+
+ <div class="form-group">
+        <label class="col-md-4 control-label"><b>Project working On</b></label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="leave" class="form-control selectpicker" >
+              <option value=" ">Project working On</option>
+              <option>Construction projects</option>
+              <option>Research projects</option>
+              <option>Reengineering projects</option>
+              <option>Procurement projects</option>
+              <option>Business implementation projects</option>
+      
+      </select>
+      </div>
+      </div>
+      </div>
+
+
+    </fieldset>
+    </form>
+</div>
+</div>
+  </body>
+<html>
